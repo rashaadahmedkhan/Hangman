@@ -4,7 +4,6 @@ import Header from './components/Header'
 import Figure from './components/Figure'
 import WrongLetters from './components/WrongLetters'
 import Word from './components/Word'
-import Popup from './components/Popup'
 import Notification from './components/Notification'
 
 const words = ['programming', 'coding', 'github', 'stackoverflow']
@@ -22,22 +21,6 @@ function App() {
             const {key, keyCode} = event
             if(playable && keyCode >= 65 && keyCode <= 90) {
                 const letter = key.toLowerCase()
-                if(selectedWord.includes(letter)) {
-                    if(!correctLetters.includes(letter)) {
-                        setCorrectletters(correctLetters => [...currentLetters, letter])
-                    }
-                    else {
-                        show(setShowNotification)
-                    }
-                }
-                else {
-                    if(!wrongLetters.includes(letter)) {
-                        setWrongLetters(currentLetters => [...currentLetters, letter])
-                    }
-                    else {
-                        show(setShowNotification)
-                    }
-                }
             }
         }
         window.addEventListener('keydown', handleKeydown)
