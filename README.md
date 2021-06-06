@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Play Hangman and guess from a few pre selected words!
 ![img.png](img.png)
 
 ## Available Scripts
